@@ -1,0 +1,33 @@
+\newpage
+\begin{center}
+\thispagestyle{empty}
+\LARGE{\textbf{PROJECT TITLE}}\\[0.5cm]
+\vspace{0.5cm}
+\Large{\textbf{\\Submitted in partial fulfillment of the requirements}}
+\vspace{0.5cm}
+\Large{\textbf{\\of the degree of}}
+\vspace{0.5cm}
+\LARGE{\textbf{\\Bachelor of Engineering}}
+\vspace{0.5cm}
+\Large{\textbf{\\by}}
+\vspace{0.5cm}
+\Large{\textbf{\\NAME OF THE STUDENT\\}}
+\Large{\textbf{\\Roll No. \textemdash \textemdash \\}}
+\vspace{0.5cm}
+\Large{\textbf{Supervisor(s):}}\\
+\vspace{0.5cm}
+\Large{\textbf{NAME OF SUPERVISORS}}\\
+\vspace{1cm}
+\includegraphics[scale=0.5]{project/images/jscoe_logo}\\
+\vspace{1cm}
+\Large{\textbf{Department of Information Technology}}\\
+\vspace{0.5cm}
+\Large{\textbf{Don Bosco Institute of Technology}}\\
+%\large{\textbf{Vidyavihar Station Road, Mumbai - 400070}}
+\large{\textbf{\\2014-2015}}\\
+\vspace{1cm}
+\Large{\textbf{AFFILIATED TO\\}}
+\vspace{0.5cm}
+\LARGE{\textbf{UNIVERSITY OF MUMBAI}}
+\newpage
+\end{center}

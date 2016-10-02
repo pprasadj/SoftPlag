@@ -1,0 +1,232 @@
+\chapter{Quotes, Poetry, List, Tables }
+\section{Quotes}
+This is how you quote something
+%quotes running in many lines
+\begin{quote}
+
+Quoting words of Prime Minister Modi \textbf{Abki baar \dots}
+
+\end{quote}
+
+End of quote
+
+%Poetry
+\section{Poetry}
+This is how you can write a poetry
+\begin{verse}
+ She sells\\
+ Sea Shells\\
+ on the\\
+ sea shore\\
+\end{verse}
+End of Poetry writing
+
+%Learning to write lists with Bullets
+\section{Bulleted List of items}
+Making a Bulleted List of items with the itemize environment
+\begin{itemize}
+\item TeX is a typesetting language and not a word processor
+\item TeX is a program and and not an application
+\item Theres is no meaning in comparing teX to a word processor, since the design
+purposes are different
+
+\end{itemize}
+
+End of Bulleted Lists
+
+%Lists within lists
+
+\subsection{Bulleted List of items with Nesting}
+\begin{itemize}
+\item TeX is a typesetting language and not a word processor
+\item TeX is a program and and not an application
+\item Theres is no meaning in comparing teX to a word processor, since the design
+purposes are different
+\begin{itemize}
+
+\item Sub List 1
+\item Sub List 2
+\item Sub List 3
+
+\end{itemize}
+\end{itemize}
+
+Itemize environment allows 4 levels of Nesting
+
+End of Lists within Lists
+
+%Lists where sequence/order is important
+\section{Ordering}
+Follow the steps to start a car
+\begin{enumerate}
+ \item Unlock the car
+ \item Open the door 
+ \item close the door
+ \item Insert the key and turn
+ \end{enumerate}
+
+End of Sequence lists This also takes in 4 levels of nesting
+
+
+% Lists where sequence/order under sequence
+\subsection{Ordering with Nesting}
+Follow the steps to start a car
+\begin{enumerate}
+ \item Unlock the car 
+ \item Open the door
+ \item close the door
+ \item Insert the key and turn
+ \begin{enumerate}
+  \item sub ordering one
+  \item sub ordering two
+  \item sub ordering three
+ \end{enumerate}
+
+ \end{enumerate}
+
+
+% Tables
+\section{Working with Tables}
+\begin{center}
+ \captionof {table}{Sem and Percentage} 
+ \begin{tabular}{|c|c|}
+  Sem & Percentage\\
+  1 & 60\\
+   2 & 65\\
+   3 & 78\\
+    4 & 50\\
+     5 & 70\\
+      6 & 90\\
+ \end{tabular}
+\end{center}
+
+%Tables with Horizontal Lines
+\subsection{Working with Tables, drawing horizontal Lines}
+\begin{center}
+ 
+ \begin{tabular}{|c|c|}
+ \hline
+  Sem & Percentage\\
+  \hline
+  1 & 60\\
+  \hline
+   2 & 65\\
+   \hline
+   3 & 78\\
+   \hline
+    4 & 50\\
+  \hline
+    5 & 70\\
+      \hline
+      6 & 90\\
+      \hline
+  \end{tabular}
+\end{center}
+
+% Tables with multi column spanning using the multicolumn command
+\subsection{Tables with multi column spanning using the multicolumn command}
+\begin{center}
+ \begin{tabular}{|c|c|c|}
+ \hline
+  {\centering Sem} & \multicolumn{2}{c|}{Marks(100)}\\
+	\cline{2-3}     %draws horizontal line from col 2 to col 3
+	& Minimum & Maximum \\
+	\hline
+ 1 & 60 & 70\\
+ \hline
+ 2 & 65 & 70\\
+ \hline
+ 3 & 78 & 80\\
+ \hline
+ 4 & 50 & 67\\
+ \hline
+ 5 & 70 & 89\\
+\hline
+ 6 & 90 & 99\\
+ \hline
+ \end{tabular}
+\end{center}
+
+
+\subsection{Tables spanning multiple Pages}
+%\renewcommand{\arraystretch}{1.2}
+\begin{longtable}{|c|l|}	% in place of begin{tabular}
+\multicolumn{2}{c}%
+{\textbf{Science and Technology in the Twentieth Century}}\\[5pt]	%text boldface
+\hline
+\multicolumn{1}{|c|}{Year}
+&\multicolumn{1}{|c|}{Event}\\
+\hline
+\endfirsthead	% rows that should appear at the top of the table should be terminated by endfirsthead
+\multicolumn{2}{c}%
+{\textbf{Science and Technology in the Twentieth Century}
+(\textit{continued})}\\[5pt]
+\hline
+\multicolumn{1}{|c|}{Year}
+&\multicolumn{1}{|c|}{Event}\\
+\hline
+\endhead 	%the rows that should appear in every page after the first, 
+\hline
+\multicolumn{2}{r}{\small\itshape continued on the next page}\\
+\endfoot	%Rows at the bottom of every page
+\hline
+\multicolumn{2}{r}{\small Source\,:\,\itshape The Cambrige Factfinder}
+\endlastfoot	%Rows at the very end of the table
+1900 & Max Planck proposes quantum theory\\
+1947 & Independance\\
+1934 & The dictionary of dates. New York: The Macmillan company.\\
+1900 & Max Planck proposes quantum theory\\
+1947 & Independance\\
+1934 & The dictionary of dates. New York: The Macmillan company.\\
+1900 & Max Planck proposes quantum theory\\
+1947 & Independance\\
+1934 & The dictionary of dates. New York: The Macmillan company.\\
+1900 & Max Planck proposes quantum theory\\
+1947 & Independance\\
+1934 & The dictionary of dates. New York: The Macmillan company.\\
+1900 & Max Planck proposes quantum theory\\
+1947 & Independance\\
+1934 & The dictionary of dates. New York: The Macmillan company.\\
+1900 & Max Planck proposes quantum theory\\
+1947 & Independance\\
+1934 & The dictionary of dates. New York: The Macmillan company.\\
+1900 & Max Planck proposes quantum theory\\
+1947 & Independance\\
+1934 & The dictionary of dates. New York: The Macmillan company.\\
+1900 & Max Planck proposes quantum theory\\
+1947 & Independance\\
+1934 & The dictionary of dates. New York: The Macmillan company.\\
+1900 & Max Planck proposes quantum theory\\
+1947 & Independance\\
+1934 & The dictionary of dates. New York: The Macmillan company.\\
+1900 & Max Planck proposes quantum theory\\
+1947 & Independance\\
+1934 & The dictionary of dates. New York: The Macmillan company.\\
+1900 & Max Planck proposes quantum theory\\
+1947 & Independance\\
+1934 & The dictionary of dates. New York: The Macmillan company.\\
+1900 & Max Planck proposes quantum theory\\
+1947 & Independance\\
+1934 & The dictionary of dates. New York: The Macmillan company.\\
+1900 & Max Planck proposes quantum theory\\
+1947 & Independance\\
+1934 & The dictionary of dates. New York: The Macmillan company.\\
+1900 & Max Planck proposes quantum theory\\
+1947 & Independance\\
+1934 & The dictionary of dates. New York: The Macmillan company.\\
+1900 & Max Planck proposes quantum theory\\
+1947 & Independance\\
+1934 & The dictionary of dates. New York: The Macmillan company.\\
+1900 & Max Planck proposes quantum theory\\
+1947 & Independance\\
+1934 & The dictionary of dates. New York: The Macmillan company.\\
+1900 & Max Planck proposes quantum theory\\
+1947 & Independance\\
+1934 & The dictionary of dates. New York: The Macmillan company.\\
+1900 & Max Planck proposes quantum theory\\
+1947 & Independance\\
+1934 & The dictionary of dates. New York: The Macmillan company.\\
+2000 & Decoding of 90\% of human genome completed\\
+\hline
+\end{longtable}
+

@@ -1,0 +1,29 @@
+\chapter{Present Investigation and Design}
+\section{Methodology \\ Procedure adopted}
+
+Describe on the development methodology / model you would use. (E.g. Agile method or Iterative Model) \\
+How you intend manage the weekly meetings ? \\
+How do you intend to monitor and measure the progress of the project? \\ 
+
+\section{Analysis}
+
+Based on the requirements gathered, how was the feasibility study of the project carried out? \\
+If any requirements, were modified why they were modified? \\
+\subsection{Software Requirement Specification - IEEE format}
+
+\section{Proposed System}
+
+Give the details of your proposed system and architecture 
+Advantage of the proposed system over the existing system
+
+\subsection{Hardware \\ Software requirements}
+Development Hardware \\ Software requirements \\
+Deployment Hardware \\ Software requirements \\
+
+\subsection{Design Details}
+
+Different UML diagrams as per the project requirement (For e.g. Use Case Diagram)
+
+\subsection{Implementation Plan}
+\subsubsection{Time line chart}
+\subsubsection{Work Breakdown Structure}

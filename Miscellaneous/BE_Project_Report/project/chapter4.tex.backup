@@ -1,0 +1,97 @@
+\chapter{Mathematical Expression}
+\section{Maths}
+\subsection{Basic Equation}
+The equation representing a straight line in the Cartesian plane is of the form $ax+by+c=0$, where $a$, $b$, $c$ are constant
+
+\subsection{Basic Equation - with space management}
+
+The equation representing a straight line in the Cartesian plane is of the form
+$$
+ax+by+c=0
+$$
+where $a$, $b$, $c$ are constants.
+
+\subsection{Superscript}
+
+In the seventeenth century, Fermat conjectured that if $n>2$, then
+there are no integers $x$, $y$, $z$ for which
+$$
+x^n+y^n=z^n.
+$$
+This was proved in 1994 by Andrew Wiles
+
+\paragraph{Be Careful of such equations: } It is easily seen that $(x^m)^n=x^{mn}$ can have mistake like $(x^m)^n=x^mn$.
+
+\subsection{Superscript of a superscript}
+
+Numbers of the form $2^{2^n}+1$, where $n$ is a natural number, are called Fermat numbers.
+
+\subsection{Subscript}
+
+The sequence $(x_n)$ defined by
+$$
+x_1=1, \quad x_2=1,\quad x_n=x_{n-1}+x_{n-2}\;\;(n>2)
+$$
+is called the Fibonacci sequence.
+
+\subsection{Subscript and Superscript together}
+
+If the sequence $(x_n)$ converges to $a$, then the sequence
+$(x_n^2)$ converges to $a^2$
+
+\subsection{Square-root and Cube-root}
+
+Which is greater $\sqrt[4]{5}$ or $\sqrt[5]{4}$?
+
+The root sign elongates automatically, $2\sqrt{2}$\,,\quad $2^2\sqrt{2-\sqrt{2}}$
+
+\subsection{Creating Mathematical Equation without numbering the equation}
+
+The equation representing a straight line in the Cartesian plane is of the form
+\begin{equation*}
+ax+by+c=0  
+\end{equation*}
+where $a$, $b$, $c$ are constants.
+
+\subsection{Creating Mathematical Equation with numbering the equation}
+
+The equation representing a straight line in the Cartesian plane is of the form
+\begin{equation}
+ax+by+c=0  
+\end{equation}
+where $a$, $b$, $c$ are constants.
+
+
+\subsection{Creating Mathematical Equation - multiline }
+
+\begin{equation*}
+\begin{split}
+(a+b+c+d+e+f)ˆ2 & = aˆ2+bˆ2+cˆ2+dˆ2+eˆ2+fˆ2\\
+&\quad +2ab+2ac+2ad+2ae+2af\\
+&\quad +2bc+2bd+2be+2bf\\
+&\quad +2cd+2ce+2cf\\
+&\quad +2de+2df\\
+&\quad +2ef
+\end{split}
+\end{equation*}
+
+
+\subsection{Creating Mathematical Equation - multiple equations in group }
+
+Thus $x$, $y$ and $z$ satisfy the equations
+\begin{align*}
+x+y-z & = 1\\
+x-y+z & = 1\\
+\intertext{and by hypothesis}
+x+y+z & =1
+\end{align*}
+
+\subsection{Creating Sequence and indicating infinite series }
+
+Consider a finite sequence $X_1,X_2,\dots$, its sum $X_1+X_2+\dots$ and product $X_1X_2\dots$.
+
+\subsection{Creating Delimiter - Brackets }
+
+\begin{equation*}
+(x+y)ˆ2-(x-y)ˆ2=((x+y)+(x-y))((x+y)-(x-y))=4xy
+\end{equation*}

@@ -1,0 +1,31 @@
+\newpage
+\begin{center}
+\thispagestyle{empty}
+\Large{\textbf{A PROJECT REPORT\\ON}}\\[0.3cm]
+\Large{\textsc {\textbf{``NAME OF PROJECT''}}}\\
+\Large{\textbf{\\Submitted to}}
+\LARGE{\textbf{\\UNIVERSITY OF MUMBAI\\}}
+\large{\textbf{\\In Partial Fulfilment of the Requirement for the Award of\\}}
+\LARGE{\textbf{\\BACHELOR'S DEGREE IN\\INFORMATION TECHNOLOGY}}
+\vspace{0.3cm}
+\Large{\textbf{\\BY}}\\[0.3cm]
+\begin{table}[h]
+\centering
+\Large{
+\begin{tabular}{>{\bfseries}lc>{\bfseries}r}
+GROUP MEMBER A & & ROLL NUMBER A\\GROUP MEMBER B & & ROLL NUMBER B\\GROUP MEMBER C & & ROLL NUMBER C\\GROUP MEMBER D & & ROLL NUMBER D\\
+\end{tabular}}
+\end{table}
+\large{\textbf{UNDER THE GUIDANCE OF}}\\
+\large{\textbf{PROF. GUIDE NAME}}\\[0.5cm]
+\includegraphics[scale=0.5]{project/images/jscoe_logo}\\
+\large{\textbf{DEPARTMENT OF INFORMATION TECHNOLOGY}}\\
+\Large{\textbf{NAME OF COLLEGE}}\\
+\large{\textbf{LOCATION IN MUMBAI, MUMBAI - PINCODE}}
+\large{\textbf{\\2012-2013}}\\[0.5cm]
+\Large{\textbf{AFFILIATED TO}}\\[0.5cm]
+\includegraphics[scale=1.0]{project/images/uop-logo}\\
+\LARGE{\textbf{UNIVERSITY OF PUNE}}
+\newpage
+
+\end{center}

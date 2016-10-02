@@ -1,0 +1,27 @@
+\begin{center}
+\thispagestyle{empty}
+\LARGE{\textbf{Acknowledgements}}\\[1cm]
+\end{center}
+\linespread{1.13}
+\large{\paragraph{}We are profoundly grateful to \textbf{Prof. GUIDE NAME} for his expert guidance
+and continuous encouragement throughout to see that this project rights its
+target since its commencement to its completion.}
+\large{\paragraph{}We would like to express deepest appreciation towards \textbf{Dr.  Prasanna Nambiar},
+Principal, Don Bosco Institute of Technology, \textbf{Prof. Shiv Negi}, 
+Head of Department of Information Technology and \textbf{Prof. Prasad Padalkar}, Project Coordinator whose
+invaluable guidance supported us in completing this project.}
+\large{\paragraph{}At last we must express our sincere heartfelt gratitude to all the staff members
+of Information Technology Department who helped me directly or indirectly during this course of work.}
+\begin{spacing}{0}
+\vspace{3.0cm}
+%\begin{justify}
+\hspace*{3.6in}\Large{\textbf{(---------------------------- )}}\\
+\vspace{1.0cm}
+\hspace*{4.5in}\textbf{(Signature)}\\[1cm]
+\hspace*{3.8in}\Large{\textbf{(---------------------------- )}}\\
+\vspace{0.5cm}
+\hspace*{3.2in}\textbf{(Name of Student and Roll No.)}\\[1cm]
+%\end{justify}
+\end{spacing}
+\justify\large{\textbf{Date:}}
+

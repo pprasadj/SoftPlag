@@ -1,0 +1,38 @@
+\begin{center}
+\thispagestyle{empty}
+
+\LARGE{\textbf{DON BOSCO INSTITUTE OF TECHNOLOGY}} \\ 
+\large{\textbf{Vidyavihar Station Road, Mumbai - 400070}}\\[0.5cm]
+\Large{\textbf{Department of Information Technology}}\\[1.5cm]
+
+%\includegraphics[scale=0.5]{project/images/jscoe_logo}\\[0.5cm]
+
+{\Huge \textbf{CERTIFICATE}}\\[0.5cm]
+\end{center}
+\linespread{1.13}
+
+\large{\justify{This is to certify that the project entitled }\textbf{\Large{``NAME OF PROJECT``}} is a bonafide  work of  \\
+
+\begin{table}[h]
+\centering
+\large{
+\begin{tabular}{>{\bfseries}lc>{\bfseries}r}
+GROUP MEMBER A & & ROLL NUMBER A\\GROUP MEMBER B & & ROLL NUMBER B\\GROUP MEMBER C & & ROLL NUMBER C\\GROUP MEMBER D & & ROLL NUMBER D\\
+\end{tabular}}
+\end{table}
+
+\justify submitted to the University of Mumbai in partial fulfillment of the requirement for the award of the degree of \textbf{\Large{Undergraduate}} in \textbf{\Large{Bachelor of Information Technology}} \\[0.25cm]
+
+\large{\textbf{Date:\hspace*{1.0cm}/\hspace*{1.0cm}/}}\\
+%\large{\textbf{Date:\date{}}}
+\begin{spacing}{0}
+\vspace{2.0cm}
+\large{\textbf{(Prof. GUIDE NAME)}}\hspace*{1.8in}\large{\textbf{}}\\
+\hspace*{0.7in}\textbf{Supervisor}\hspace*{2.5in}\textbf{}\\[3cm]
+
+\large{\textbf{(Prof. Shiv Negi)}}\hspace*{2.1in}\large{\textbf{(Dr. Prasanna Nambiar)}}\\
+\hspace*{0.3in}\textbf{HOD, IT Department}\hspace*{2.3in}\textbf{Principal}\\[3cm]
+
+%\hspace*{0.5cm}\large{\textbf{(Prof. HOD NAME)}}\hspace*{0.8in}\large{\textbf{(Dr. PRINCIPAL NAME)}}\\
+%\textbf{HOD, Computer Department}\hspace*{0.8in}\textbf{Principal}\hspace*{1.1in}
+\end{spacing}

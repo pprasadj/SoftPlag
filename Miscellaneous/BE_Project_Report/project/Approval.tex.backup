@@ -1,0 +1,37 @@
+\begin{center}
+\thispagestyle{empty}
+
+\LARGE{\textbf{DON BOSCO INSTITUTE OF TECHNOLOGY}} \\ 
+\large{\textbf{Department of Information Technology}}\\
+\large{\textbf{Vidyavihar Station Road, Mumbai - 400070}}\\[1.5cm]
+
+%\includegraphics[scale=0.5]{project/images/jscoe_logo}\\[0.5cm]
+
+{\Huge \textbf{Project Report Approval for B.E.}}\\[0.5cm]
+\end{center}
+\linespread{1.13}
+
+\large{\justify{This project report entitled }\textbf{\Large{``NAME OF PROJECT``}} by \textbf{\Large{Author Name}} is approved for the degree of \textbf{\Large{Bachelor of Engineering in Information Technology}}
+%\vspace{0.25cm}
+\begin{flushright}
+\Large{\textbf{(Examiner's Name and Signature)}}\\[0.5cm]
+%\vspace{0.25cm}
+\hspace*{0.7in}\textbf{1. ---------------------------------------}\\[1cm]
+\hspace*{0.7in}\textbf{2. ---------------------------------------}\\[3cm]
+\end{flushright}
+%\vspace{0.25cm}
+\begin{flushright}
+\Large{\textbf{(Supervisor)}}\\
+\vspace{0.25cm}
+\hspace*{0.7in}\textbf{1. -----------------------------}\\[1cm]
+%\hspace*{0.7in}\textbf{2. -----------------------------}\\[3cm]
+\end{flushright}
+%\vspace{0.25cm}
+\begin{flushright}
+\Large{\textbf{( Chairman)}}\\
+\vspace{0.25cm}
+\hspace*{0.7in}\textbf{1. -----------------------------}\\[1cm]
+\end{flushright}
+
+\justify\large{\textbf{Date:}}\\
+\justify\large{\textbf{Place: }}
