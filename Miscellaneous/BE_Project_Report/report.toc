@@ -10,18 +10,18 @@
 \contentsline {chapter}{\numberline {2}Review of Literature }{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}Summary of the investigation in the published papers}{3}{section.2.1}
 \contentsline {section}{\numberline {2.2}Comparison between the tools / methods / algorithms}{4}{section.2.2}
-\contentsline {section}{\numberline {2.3}Algorithm(s) with example}{4}{section.2.3}
-\contentsline {chapter}{\numberline {3}Analysis and Design}{5}{chapter.3}
-\contentsline {section}{\numberline {3.1}Methodology / Procedure adopted}{5}{section.3.1}
-\contentsline {section}{\numberline {3.2}Analysis}{5}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Software / System Requirement Specification - IEEE format}{5}{subsection.3.2.1}
-\contentsline {section}{\numberline {3.3}Proposed System}{5}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Hardware / Software requirements}{5}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Design Details}{6}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Implementation Plan}{6}{subsection.3.3.3}
-\contentsline {chapter}{\numberline {4}Results and Discussion }{7}{chapter.4}
-\contentsline {chapter}{\numberline {5}Conclusion }{8}{chapter.5}
-\contentsline {paragraph}{Data Sheet(s) - Electronic component}{9}{section*.8}
-\contentsline {paragraph}{Installation Procedure - Development Software}{9}{section*.9}
-\contentsline {paragraph}{}{11}{section*.11}
-\contentsline {paragraph}{}{11}{section*.12}
+\contentsline {section}{\numberline {2.3}Algorithm(s) with example}{5}{section.2.3}
+\contentsline {chapter}{\numberline {3}Analysis and Design}{6}{chapter.3}
+\contentsline {section}{\numberline {3.1}Methodology / Procedure adopted}{6}{section.3.1}
+\contentsline {section}{\numberline {3.2}Analysis}{6}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Software / System Requirement Specification - IEEE format}{6}{subsection.3.2.1}
+\contentsline {section}{\numberline {3.3}Proposed System}{6}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Hardware / Software requirements}{6}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Design Details}{7}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Implementation Plan}{7}{subsection.3.3.3}
+\contentsline {chapter}{\numberline {4}Results and Discussion }{8}{chapter.4}
+\contentsline {chapter}{\numberline {5}Conclusion }{9}{chapter.5}
+\contentsline {paragraph}{Data Sheet(s) - Electronic component}{10}{section*.8}
+\contentsline {paragraph}{Installation Procedure - Development Software}{10}{section*.9}
+\contentsline {paragraph}{}{12}{section*.11}
+\contentsline {paragraph}{}{12}{section*.12}
