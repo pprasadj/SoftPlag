@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.2)  4 OCT 2016 00:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.2)  29 OCT 2016 22:25
 entering extended mode
 **./report.tex
 (report.tex
@@ -794,11 +794,11 @@ Package: fancyhdr 2016/09/06 3.8 Extensive control of page headers and footers
 )
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 77.
+less on input line 80.
 
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 79.
+less on input line 82.
 
 (C:\Users\Dev_N\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\basiclayer\pgf.sty
 (C:\Users\Dev_N\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\utilities\pgfrcs.sty
@@ -1050,25 +1050,25 @@ Package: pgfpages 2011/01/05 ver 0.02
  (report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 109.
-LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 10
-9.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 112.
+LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 11
+2.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omspzccm.fd"
 File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
 )
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1131,7 +1131,7 @@ G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
 \AtBeginShipoutBox=\box48
-Package hyperref Info: Link coloring OFF on input line 109.
+Package hyperref Info: Link coloring OFF on input line 112.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1141,9 +1141,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count155
 )
-LaTeX Info: Redefining \ref on input line 109.
-LaTeX Info: Redefining \pageref on input line 109.
-LaTeX Info: Redefining \nameref on input line 109.
+LaTeX Info: Redefining \ref on input line 112.
+LaTeX Info: Redefining \pageref on input line 112.
+LaTeX Info: Redefining \nameref on input line 112.
 
 (report.out) (report.out)
 \@outlinefile=\write5
@@ -1159,7 +1159,7 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 109.
+LaTeX Info: Redefining \selectfont on input line 112.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -1171,7 +1171,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 6.
 
-<project/images/jscoe_logo.png, id=86, 259.4493pt x 226.2051pt>
+<project/images/jscoe_logo.png, id=90, 259.4493pt x 226.2051pt>
 File: project/images/jscoe_logo.png Graphic file (type png)
 
 <use project/images/jscoe_logo.png>
@@ -1259,7 +1259,23 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 Chapter 1.
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <14.4> not available
 (Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 7.
-) (project/chapter2.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 12.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 14.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 14.
+
+Overfull \hbox (124.34999pt too wide) in paragraph at lines 14--23
+ [][] 
+ []
+
+
+Underfull \vbox (badness 1297) has occurred while \output is active []
+
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1270,8 +1286,22 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
+l.30 
+      [1
+
+]) (project/chapter2.tex
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
 l.1 			\chapter
-               {Review of Literature } [1
+               {Review of Literature } [2
 
 ]
 Chapter 2.
@@ -1287,19 +1317,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.21 
-      [2
-
-]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 34.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 34.
-
+      [3]
 Underfull \hbox (badness 10000) in paragraph at lines 38--38
 []|\OT1/ptm/m/n/12 Open Source
  []
@@ -1351,12 +1374,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
+pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 \chapter
-            {Analysis and Design} [3
+            {Analysis and Design} [4
 
 ]
 
@@ -1365,12 +1388,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
+pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 \chapter
-            {Analysis and Design} [4]
+            {Analysis and Design} [5]
 Chapter 3.
 
 Underfull \hbox (badness 10000) in paragraph at lines 4--7
@@ -1393,27 +1416,47 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.27 \subsection
-                {Implementation Plan} [5]) (project/chapter4.tex
+[6]) (project/chapter4.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[6
+[7
 
 ]
 Chapter 4.
+<images/Level1.jpg, id=184, 799.18575pt x 403.5075pt>
+File: images/Level1.jpg Graphic file (type jpg)
+ <use images/Level1.jpg>
+Package pdftex.def Info: images/Level1.jpg used on input line 7.
+(pdftex.def)             Requested size: 364.19667pt x 183.88557pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--4
+<images/Level3.jpg, id=185, 837.72975pt x 510.10574pt>
+File: images/Level3.jpg Graphic file (type jpg)
+ <use images/Level3.jpg>
+Package pdftex.def Info: images/Level3.jpg used on input line 12.
+(pdftex.def)             Requested size: 364.19667pt x 221.76189pt.
 
- []
+<images/JPlag.jpg, id=186, 1083.44775pt x 209.583pt>
 
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[8]
+File: images/JPlag.jpg Graphic file (type jpg)
+ <use images/JPlag.jpg>
+Package pdftex.def Info: images/JPlag.jpg used on input line 19.
+(pdftex.def)             Requested size: 364.19667pt x 70.44818pt.
+ <images/MOSS.jpg, id=191, 342.078pt x 160.80075pt>
+File: images/MOSS.jpg Graphic file (type jpg)
+
+<use images/MOSS.jpg>
+Package pdftex.def Info: images/MOSS.jpg used on input line 28.
+(pdftex.def)             Requested size: 364.19667pt x 171.20367pt.
 ) (project/chapter5.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1421,7 +1464,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[7]
+[9
+
+ <./images/Level1.jpg> <./images/Level3.jpg>]
 Chapter 5.
 
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
@@ -1435,18 +1480,17 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[8
+[10 <./images/JPlag.jpg> <./images/MOSS.jpg>] (project/appendix.tex) [11
 
-] (project/appendix.tex) [9
-
-] (project/ref.tex)
+]
+(project/ref.tex)
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[10] (project/acknowledgements.tex
+[12] (project/acknowledgements.tex
 Overfull \hbox (6.42947pt too wide) in paragraph at lines 17--24
  | \OT1/ptm/b/n/17.28 (Name of Stu-dent and Roll No.) 
  []
@@ -1456,21 +1500,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--24
 
  []
 
-) (report.ind) [11
+) (report.ind) [13
 
-] [12]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 177.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 177.
+] [14]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 183.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 183.
  (report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 177.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 177.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 183.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 183.
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 82853E9EA965ABC45C68BF88D2234516;1437.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 177.
+(rerunfilecheck)             Checksum: FCE1A5137A72882E8349B4B042CCC940;1543.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 183.
  )
 (\end occurred inside a group at level 5)
 
@@ -1481,13 +1521,13 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 177.
 ### simple group (level 1) entered at line 14 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 18023 strings out of 493334
- 314617 string characters out of 3136672
- 410039 words of memory out of 3000000
- 21108 multiletter control sequences out of 15000+200000
+ 18054 strings out of 493334
+ 315100 string characters out of 3136672
+ 410396 words of memory out of 3000000
+ 21129 multiletter control sequences out of 15000+200000
  40337 words of font info for 78 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,11n,45p,714b,676s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 48i,12n,45p,714b,717s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.
 enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pf
 b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Pro
@@ -1495,9 +1535,9 @@ gram Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files
 (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTe
 X 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
 /type1/urw/times/utmri8a.pfb>
-Output written on report.pdf (19 pages, 128383 bytes).
+Output written on report.pdf (21 pages, 487841 bytes).
 PDF statistics:
- 243 PDF objects out of 1000 (max. 8388607)
- 49 named destinations out of 1000 (max. 500000)
- 178 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 261 PDF objects out of 1000 (max. 8388607)
+ 53 named destinations out of 1000 (max. 500000)
+ 206 words of extra memory for PDF output out of 10000 (max. 10000000)
 
