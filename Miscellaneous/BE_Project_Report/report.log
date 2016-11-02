@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.2)  29 OCT 2016 22:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.2)  2 NOV 2016 15:44
 entering extended mode
 **./report.tex
 (report.tex
@@ -1047,7 +1047,14 @@ Package: pgfpages 2011/01/05 ver 0.02
 \pgfpages@shipoutbox=\box45
 )
 \pgfpages@box@1=\box46
- (report.aux)
+ (report.aux
+
+LaTeX Warning: Label `fig:Level1' multiply defined.
+
+
+LaTeX Warning: Label `fig:Level3' multiply defined.
+
+)
 \openout1 = `report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 112.
@@ -1232,7 +1239,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--27
  []
 
 ) [3] (project/Declaration.tex
-Underfull \hbox (badness 10000) in paragraph at lines 19--23
+Overfull \hbox (0.88322pt too wide) in paragraph at lines 19--22
+ | \OT1/ptm/b/n/17.28 (De-ven Bhalerao) 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--22
 
  []
 
@@ -1258,21 +1270,21 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 ] (project/chapter1.tex
 Chapter 1.
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <14.4> not available
-(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 7.
+(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 9.
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 12.
+               Default added (so using `tbp') on input line 14.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 14.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 16.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 14.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 16.
 
-Overfull \hbox (124.34999pt too wide) in paragraph at lines 14--23
+Overfull \hbox (124.34999pt too wide) in paragraph at lines 16--25
  [][] 
  []
 
-
+) (project/chapter2.tex
 Underfull \vbox (badness 1297) has occurred while \output is active []
 
 
@@ -1286,10 +1298,10 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.30 
-      [1
+l.1 			\chapter
+               {Review of Literature } [1
 
-]) (project/chapter2.tex
+]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1367,7 +1379,13 @@ Underfull \hbox (badness 1142) in paragraph at lines 60--60
 \OT1/ptm/m/n/12 are ef-fec-tive in de-tect-ing pla-gia-
  []
 
-) (project/chapter3.tex
+<images/Level0Alg.jpg, id=170, 318.59026pt x 189.70876pt>
+File: images/Level0Alg.jpg Graphic file (type jpg)
+
+<use images/Level0Alg.jpg>
+Package pdftex.def Info: images/Level0Alg.jpg used on input line 82.
+(pdftex.def)             Requested size: 364.19667pt x 216.8839pt.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1378,10 +1396,19 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1 \chapter
-            {Analysis and Design} [4
+l.85 
+      [4
 
-]
+] <images/Level1Alg.jpg, id=174, 380.622pt x 339.669pt>
+File: images/Level1Alg.jpg Graphic file (type jpg)
+
+<use images/Level1Alg.jpg>
+Package pdftex.def Info: images/Level1Alg.jpg used on input line 89.
+(pdftex.def)             Requested size: 364.19667pt x 325.03159pt.
+
+Underfull \vbox (badness 1824) has occurred while \output is active []
+
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1392,21 +1419,30 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1 \chapter
-            {Analysis and Design} [5]
+l.94 
+      [5] <images/Level3Alg.jpg, id=178, 419.166pt x 222.23026pt>
+File: images/Level3Alg.jpg Graphic file (type jpg)
+
+<use images/Level3Alg.jpg>
+Package pdftex.def Info: images/Level3Alg.jpg used on input line 97.
+(pdftex.def)             Requested size: 364.19667pt x 193.08781pt.
+) (project/chapter3.tex
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[6 <./images/Level0Alg.jpg> <./images/Level1Alg.jpg>]
 Chapter 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--7
-
+Overfull \hbox (0.51158pt too wide) in paragraph at lines 16--17
+\OT1/ptm/m/n/14.4 hances the evolv-ing ver-sions un-til the com-plete sys-tem i
+s im-ple-mented
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--12
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--22
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  []
 
@@ -1416,47 +1452,68 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[6]) (project/chapter4.tex
+[7 <./images/Level3Alg.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 26--31
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--41
+
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[7
+[8
 
-]
+]) (project/chapter4.tex
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[9]
 Chapter 4.
-<images/Level1.jpg, id=184, 799.18575pt x 403.5075pt>
+<images/Level1.jpg, id=207, 380.622pt x 195.129pt>
 File: images/Level1.jpg Graphic file (type jpg)
  <use images/Level1.jpg>
-Package pdftex.def Info: images/Level1.jpg used on input line 7.
-(pdftex.def)             Requested size: 364.19667pt x 183.88557pt.
+Package pdftex.def Info: images/Level1.jpg used on input line 10.
+(pdftex.def)             Requested size: 364.19667pt x 186.72026pt.
 
-<images/Level3.jpg, id=185, 837.72975pt x 510.10574pt>
+<images/Level3.jpg, id=208, 417.9615pt x 157.7895pt>
 File: images/Level3.jpg Graphic file (type jpg)
  <use images/Level3.jpg>
-Package pdftex.def Info: images/Level3.jpg used on input line 12.
-(pdftex.def)             Requested size: 364.19667pt x 221.76189pt.
+Package pdftex.def Info: images/Level3.jpg used on input line 17.
+(pdftex.def)             Requested size: 364.19667pt x 137.49966pt.
 
-<images/JPlag.jpg, id=186, 1083.44775pt x 209.583pt>
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[8]
+[10] <images/JPlag.jpg, id=213, 1083.44775pt x 209.583pt>
 File: images/JPlag.jpg Graphic file (type jpg)
- <use images/JPlag.jpg>
-Package pdftex.def Info: images/JPlag.jpg used on input line 19.
+
+<use images/JPlag.jpg>
+Package pdftex.def Info: images/JPlag.jpg used on input line 23.
 (pdftex.def)             Requested size: 364.19667pt x 70.44818pt.
- <images/MOSS.jpg, id=191, 342.078pt x 160.80075pt>
+ <images/MOSS.jpg, id=214, 342.078pt x 160.80075pt>
 File: images/MOSS.jpg Graphic file (type jpg)
 
 <use images/MOSS.jpg>
-Package pdftex.def Info: images/MOSS.jpg used on input line 28.
+Package pdftex.def Info: images/MOSS.jpg used on input line 32.
 (pdftex.def)             Requested size: 364.19667pt x 171.20367pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--34
+
+ []
+
 ) (project/chapter5.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1464,15 +1521,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[9
+[11
 
  <./images/Level1.jpg> <./images/Level3.jpg>]
 Chapter 5.
-
-Underfull \hbox (badness 10000) in paragraph at lines 3--4
-
- []
-
 )
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1480,7 +1532,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[10 <./images/JPlag.jpg> <./images/MOSS.jpg>] (project/appendix.tex) [11
+[12 <./images/JPlag.jpg> <./images/MOSS.jpg>] (project/appendix.tex) [13
 
 ]
 (project/ref.tex)
@@ -1490,7 +1542,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[12] (project/acknowledgements.tex
+[14] (project/acknowledgements.tex
 Overfull \hbox (6.42947pt too wide) in paragraph at lines 17--24
  | \OT1/ptm/b/n/17.28 (Name of Stu-dent and Roll No.) 
  []
@@ -1500,16 +1552,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--24
 
  []
 
-) (report.ind) [13
+) (report.ind) [15
 
-] [14]
+] [16]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 183.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 183.
  (report.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 183.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 183.
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: FCE1A5137A72882E8349B4B042CCC940;1543.
+(rerunfilecheck)             Checksum: 39DD7D5CE3ECCE3B645554DB9958E50C;1526.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 183.
  )
 (\end occurred inside a group at level 5)
@@ -1521,13 +1577,13 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 183.
 ### simple group (level 1) entered at line 14 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 18054 strings out of 493334
- 315100 string characters out of 3136672
- 410396 words of memory out of 3000000
- 21129 multiletter control sequences out of 15000+200000
+ 18085 strings out of 493334
+ 315585 string characters out of 3136672
+ 411508 words of memory out of 3000000
+ 21143 multiletter control sequences out of 15000+200000
  40337 words of font info for 78 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,12n,45p,714b,717s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 48i,11n,45p,714b,680s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.
 enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pf
 b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Pro
@@ -1535,9 +1591,9 @@ gram Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files
 (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTe
 X 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
 /type1/urw/times/utmri8a.pfb>
-Output written on report.pdf (21 pages, 487841 bytes).
+Output written on report.pdf (23 pages, 443525 bytes).
 PDF statistics:
- 261 PDF objects out of 1000 (max. 8388607)
- 53 named destinations out of 1000 (max. 500000)
- 206 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 287 PDF objects out of 1000 (max. 8388607)
+ 67 named destinations out of 1000 (max. 500000)
+ 221 words of extra memory for PDF output out of 10000 (max. 10000000)
 
