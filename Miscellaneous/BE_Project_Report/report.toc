@@ -15,14 +15,18 @@
 \contentsline {section}{\numberline {3.1}Methodology / Procedure adopted}{8}{section.3.1}
 \contentsline {section}{\numberline {3.2}Analysis}{9}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Software / System Requirement Specification - IEEE format}{9}{subsection.3.2.1}
-\contentsline {section}{\numberline {3.3}Proposed System}{9}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Hardware / Software requirements}{9}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Design Details}{10}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Implementation Plan}{10}{subsection.3.3.3}
-\contentsline {chapter}{\numberline {4}Results and Discussion }{11}{chapter.4}
-\contentsline {section}{\numberline {4.1}Result of Comparison for various levels for Execution time}{11}{section.4.1}
-\contentsline {chapter}{\numberline {5}Conclusion }{13}{chapter.5}
-\contentsline {paragraph}{Data Sheet(s) - Electronic component}{14}{section*.12}
-\contentsline {paragraph}{Installation Procedure - Development Software}{14}{section*.13}
-\contentsline {paragraph}{}{16}{section*.15}
-\contentsline {paragraph}{}{16}{section*.16}
+\contentsline {section}{\numberline {3.3}Proposed System}{14}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Hardware / Software requirements}{14}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Design Details}{14}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Implementation Plan}{15}{subsection.3.3.3}
+\contentsline {section}{\numberline {3.4}Proposed System}{15}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Hardware / Software requirements}{15}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Design Details}{15}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Implementation Plan}{15}{subsection.3.4.3}
+\contentsline {chapter}{\numberline {4}Results and Discussion }{16}{chapter.4}
+\contentsline {section}{\numberline {4.1}Result of Comparison for various levels for Execution time}{16}{section.4.1}
+\contentsline {chapter}{\numberline {5}Conclusion }{18}{chapter.5}
+\contentsline {paragraph}{Data Sheet(s) - Electronic component}{19}{section*.12}
+\contentsline {paragraph}{Installation Procedure - Development Software}{19}{section*.13}
+\contentsline {paragraph}{}{21}{section*.15}
+\contentsline {paragraph}{}{21}{section*.16}
