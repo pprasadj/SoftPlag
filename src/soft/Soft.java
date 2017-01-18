@@ -5,6 +5,8 @@
  */
 package soft;
 
+import java.util.Vector;
+
 /**
  *
  * @author Manish
@@ -15,7 +17,7 @@ public class Soft {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Vector v = new Vector();
     }
     
 }
