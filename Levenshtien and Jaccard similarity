@@ -1,1 +1,40 @@
 Comparison of the levenshtien and Jaccard  are two techniques for detecting document  similarity..
+1. Levenshtein is perfect to run for finding the similarity on small strings, to small string and a big string where the
+editing difference is a small number to be expected.
+2. If the cost is 0 then the strings are exact the same if the cost is equal to the length of the longs string then the
+strings are totally opposite.
+3. The advantage: Can do what Hamming Distance can do and elimination and insertion. Levenshtein Distance is
+not restricted by the strings needing to have the same length. The cost can at most be the length of the longest
+string.
+4. The disadvantage: Running Levenshtein on two long strings results in a long time and a big cost that is
+proportional to the product of the two string lengths. 
+
+5. There are two variants of Levenshtein that are important to look at: The Optimal String Alignment Algorithm and
+the Damerau-Levenshtein.
+6.Both the algorithms can do the same thing as Levenshtein except they can accomplish transposition too. The
+difference between Optimal String Alignment and Damerau-Levenshtein is that Optimal String Alignment
+Algorithm only completes transposition under the condition that no substring is edited more than once whereas
+Damerau-Levenshtein is not restricted by such a thing. That is also why Optimal String Alignment is sometimes
+called the Restricted Edit Distance.
+
+
+JAACARD
+
+--The Jaccard Similarity Index can be used to represent the similarity between two documents. A value “0” means the documents are completely dissimilar,
+ “1” that they are identical,  and values between 0 and 1 representing a degree of similarity.
+
+--The Jaccard index is defined as the size of the intersection of the two documents divided by the size of the union of the two documents.
+
+Of course, we need to decide how to represent the two documents as sets. Of the different ways this can be done, we might:
+
+-Use a Bag Of Words, which is the list of unique words in the document, with no frequency count.
+
+--A Bag of Words with Stop Words removed (common language words like “the”, “at” for English).
+Sets that take into account the frequency of words in the document.
+k-Shingles which are fixed k length overlapping runs of characters extracted from the document.
+n-grams which are fixed length n word runs. For example, a 2-gram are overlapping pairs of words taken from a document.
+
+--A simple, efficient, way of representing a bag of words is to create a dictionary of all words and assign a unique integer value to each word. 
+Then, the bag of words for a document is simply the unique list of integer values for the words in the document, e.g. List<int>.
+
+
