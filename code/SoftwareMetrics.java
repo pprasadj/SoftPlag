@@ -63,6 +63,13 @@ public class SoftwareMetrics {
 				avgIndentationSpace(i);
 			}
 			commentsCounter(currentLine);
+			String[] operators = { "+", "-", "/", "*", "%", "<", ">", "<=", ">=", "instanceof", "==", "!=", "&", "^",
+					"|", "||", "&&", "+=", "+=", "-=", "*=", "/=", "%=" };
+			List<String> operatorList = stringContainsOperatorsFromList(currentLine, operators);
+			totalOperators += operatorList.size();
+			if (operatorList.size() != 0) {
+				operatorWhiteSpaceCount(currentLine, operatorList);
+			}
 		}
 
 	}
@@ -160,6 +167,86 @@ public class SoftwareMetrics {
 					pureCommentCount++;
 				}
 			}
+		}
+
+	}
+
+	private List<String> stringContainsOperatorsFromList(String currentLine, String[] operators) {
+		char[] charArr = currentLine.toCharArray();
+		List<String> operatorList = new ArrayList<String>();
+		for (int i = 0; i < operators.length; i++) {
+			if (currentLine.contains(operators[i])) {
+				if (operators[i].length() > 1) {
+					char[] opArray = operators[i].toCharArray();
+					String singleOperator = String.valueOf(opArray[0]);
+					operatorList.remove(singleOperator);
+				}
+				if (operators[i].equals("/")) {
+					int indexOfDiv = operators[i].indexOf("/");
+					if (charArr[indexOfDiv + 1] == '/' && (indexOfDiv != charArr.length - 1)) {
+						continue;
+					}
+				}
+				int commentStartIndex = currentLine.length() - 1;
+				int commentEndIndex = 0;
+				if (currentLine.contains("//") || currentLine.contains("/*") || currentLine.contains("*/")) {
+					if (currentLine.contains("//")) {
+						commentStartIndex = currentLine.indexOf("//");
+					} else if (currentLine.contains("/*")) {
+						commentStartIndex = currentLine.indexOf("/*");
+					}
+					if (currentLine.contains("*/")) {
+						commentEndIndex = currentLine.indexOf("/*");
+					}
+				}
+				if (!traditionalContinueFlag) {
+					int operatorIndex = currentLine.indexOf(operators[i]);
+					if (operatorIndex < commentStartIndex && operatorIndex > commentEndIndex) {
+						operatorList.add(operators[i]);
+					}
+				}
+			}
+		}
+		/*
+		 * if (operatorList.size() != 0) { System.out.println(
+		 * "\tLine contains following operators : "); for (String operator :
+		 * operatorList) { //System.out.print("\t" + operator + " "); }
+		 * //System.out.println(); }
+		 */
+		return operatorList;
+	}
+
+	private void operatorWhiteSpaceCount(String currentLine, List<String> operators) {
+		// counts whitespcae around operaotr
+		// System.out.println("\tThe line is : " + currentLine);
+		char[] lineCharArr = currentLine.toCharArray();
+		linesWithOperatorCount++;
+		for (String operator : operators) {
+			int indOperator = currentLine.indexOf(operator);
+			int leadingSpace = 0;
+			int trailingSpace = 0;
+			int i1 = indOperator + 1;
+			if (operator.length() > 1) {
+				i1 += (operator.length() - 1);
+			}
+			for (; i1 < currentLine.length(); i1++) {
+				if (lineCharArr[i1] != ' ') {
+					break;
+				}
+				trailingSpace++;
+			}
+			for (int i = indOperator - 1; i > 0; i--) {
+				if (lineCharArr[i] != ' ') {
+					break;
+				}
+				leadingSpace++;
+			}
+			// System.out.println("cuurent line is " + currentLine);
+			// System.out.println("\tspace near " + operator + " is
+			// leadingspace: " + leadingSpace + " trailingspace: "+
+			// trailingSpace);
+			totalSpaceBeforeOperator += leadingSpace;
+			totalSpaceAfterOperator += trailingSpace;
 		}
 
 	}
