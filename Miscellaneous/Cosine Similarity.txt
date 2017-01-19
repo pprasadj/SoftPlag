@@ -1,0 +1,19 @@
+ Cosine Similarity between two texts can be computed as the cosine of the angle between the vectors.
+
+cos(d1, d2) = (d1 · d2) / ||d1|| ||d2|| , 
+where · indicates vector dot product, ||d|: the length of vector d
+
+This means to find the Cosine Similarity, one has to
+• Find the dot product of the vectors
+• Determine the magnitude of vector 
+• Determine the magnitude of vector 
+• Multiply the magnitude of vector with magnitude of vector
+• Divide the found dot product of the vectors by the products of the magnitudes of vector 
+and vector 
+Before going further it is best to mention that a vector is a geometric structure with both length aka magnitude
+and direction. Mathematical operations like addition, multiplication, division can be done if and only if the
+vectors being performed on have an equal number of dimensions.
+
+There are two ways of storing the letters in the vectors; one is by occurrence and the other by frequency.
+Storing only the occurrence of a letter in the vector it will result in a binary occurrence vector but storing the
+frequency in which a letter occurs in the vector, it will result in a frequency of an occurrence vector.
