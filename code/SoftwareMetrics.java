@@ -62,6 +62,7 @@ public class SoftwareMetrics {
 			if (currentLine.indexOf("{") != -1) {
 				avgIndentationSpace(i);
 			}
+			commentsCounter(currentLine);
 		}
 
 	}
@@ -121,6 +122,45 @@ public class SoftwareMetrics {
 		// System.out.println(indentNextLine);
 		indentList.add(indentNextLine);
 		numindentSpace += indentNextLine;
+
+	}
+
+
+	private void commentsCounter(String currentLine) {
+		// counts traditional and end of line comments counter
+		currentLine = currentLine.trim();
+		if (currentLine.contains("//") || currentLine.contains("/*")) {
+			if (currentLine.contains("/*")) {
+				traditionalContinueFlag = true;
+				System.out.println("found traditional : \t" + currentLine);
+				traditionalCommentCount++;
+			}
+			if (currentLine.contains("//")) {
+				System.out.println("found end of line : \t" + currentLine);
+				endofLineCommentCount++;
+				if(currentLine.startsWith("//")){
+					pureCommentCount++;
+					System.out.println("found pure comment line : \t" + currentLine);
+				}
+			}
+		}
+		if (traditionalContinueFlag) {
+			if (currentLine.contains("*/")) {
+				traditionalContinueFlag = false;
+				System.out.println("traditonal ended : " + currentLine);
+				if(currentLine.endsWith("*/")){
+					pureCommentCount++;
+					System.out.println("pure comment : " + currentLine);
+					
+				}
+			} else {
+				System.out.println("found traditional continued : \t" + currentLine);
+				System.out.println("found pure comment line : \t" + currentLine);
+				if(!currentLine.startsWith("/*")){
+					pureCommentCount++;
+				}
+			}
+		}
 
 	}
 
