@@ -251,5 +251,63 @@ public class SoftwareMetrics {
 
 	}
 
+	/* TESTING METHODS */
+
+	private int[] getClosebr() {
+		int[] arr = new int[3];
+		arr[0] = totalCloseBraces;
+		arr[1] = lastCloseBraceCount;
+		arr[2] = firstCloseBraceCount;
+		return arr;
+	}
+
+	private int[] getOpebr() {
+		int[] arr = new int[2];
+		arr[0] = totalOpenBraces;
+		arr[1] = lastOpenBraceCount;
+		return arr;
+	}
+
+	private void getIndentList() {
+		for (int ind : indentList) {
+			System.out.print(ind + " ");
+		}
+		System.out.println();
+	}
+
+	private void getNumLineswithOperators() {
+		System.out.println(linesWithOperatorCount);
+	}
+
+	private void getTotalSpaceAroundOperator() {
+		System.out.println("total trailing space : " + totalSpaceBeforeOperator + "|| total space after operator : "
+				+ totalSpaceAfterOperator + "|| total operators : " + totalOperators);
+	}
+
+	private void getComments() {
+		System.out.println("tradiotional comments : " + traditionalCommentCount + "|| end of line : "
+				+ endofLineCommentCount + "|| pure comment line : " + pureCommentCount);
+	}
+
+	public static void main(String[] args) {
+		try {
+			SoftwareMetrics sm = new SoftwareMetrics(new File("F:\\BE project\\code\\File1.java"));
+			System.out.println(sm.getOpebr()[0] + " " + sm.getOpebr()[1]);
+			System.out.println("Total close braces : " + sm.getClosebr()[0] + " ||| Total close braces that are last : "
+					+ sm.getClosebr()[1] + " ||| Total close braces that are first : " + sm.getClosebr()[2]);
+			sm.getIndentList();
+			sm.getNumLineswithOperators();
+			sm.getTotalSpaceAroundOperator();
+			sm.getComments();
+
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+	/* TESTING METHODS END */
+
 
 }
