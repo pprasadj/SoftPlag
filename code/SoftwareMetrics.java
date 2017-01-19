@@ -59,6 +59,9 @@ public class SoftwareMetrics {
 			currentLine = contentFile1.get(i);
 			openBraceCount(currentLine);
 			closedBraceCount(currentLine);
+			if (currentLine.indexOf("{") != -1) {
+				avgIndentationSpace(i);
+			}
 		}
 
 	}
@@ -90,5 +93,36 @@ public class SoftwareMetrics {
 			}
 		}
 	}
+
+	private void avgIndentationSpace(int lineNumber) {
+		// counts avg in space
+		numIndentation++;
+		String currentLine = contentFile1.get(lineNumber);
+		String nextLine = contentFile1.get(lineNumber + 1);
+		// System.out.println(currentLine);
+		// System.out.println(nextLine);
+		int indentStartIndex = 0;
+		char[] currentLineArr = currentLine.toCharArray();
+		for (int i = 0; i < currentLine.length(); i++) {
+			if (currentLineArr[i] != ' ') {
+				indentStartIndex = i;
+				break;
+			}
+		}
+		// System.out.println(indentStartIndex);
+		int indentNextLine = 0;
+		char[] nextLineArr = nextLine.toCharArray();
+		for (int i = indentStartIndex; i < nextLine.length(); i++) {
+			if (nextLineArr[i] != ' ') {
+				break;
+			}
+			indentNextLine++;
+		}
+		// System.out.println(indentNextLine);
+		indentList.add(indentNextLine);
+		numindentSpace += indentNextLine;
+
+	}
+
 
 }
