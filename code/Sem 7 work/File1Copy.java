@@ -54,24 +54,6 @@ public class File1Copy {
                         System.exit(0);
                 }
                 
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
                 //NOTE : use Math.PI constant to get value of pi
                 double area = Math.PI * radius * radius ;
                
