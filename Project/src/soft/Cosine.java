@@ -40,19 +40,25 @@ public class Cosine {
 double Cosine_score(File f1,File f2) throws Exception
    {
        double sim_score=0.0000000;
+       
+       // finding unique words from two documents.
  Hashtable<String, Cos> frequency_wordv = new Hashtable<String, Cosine.Cos>();
   LinkedList<String> Distinct_words_text_1_2 = new LinkedList<String>();
-		BufferedReader br1 = new BufferedReader(new FileReader(f1));
-		BufferedReader br2 = new BufferedReader(new FileReader(f2));
+		BufferedReader br1 = new BufferedReader(new FileReader(f1));  // taking input from file 1
+		BufferedReader br2 = new BufferedReader(new FileReader(f2));  // taking input from file 2
 
-		List<String> l1 = br1.lines().collect(Collectors.toList());
-		List<String> l2 = br2.lines().collect(Collectors.toList());
+		// taking contents in a list
+                List<String> l1 = br1.lines().collect(Collectors.toList());
+		List<String> l2 = br2.lines().collect(Collectors.toList()); 
                 
+               // removing spaces between two words and stored in a array
                 for (String sim : l1 ){
                    String simi[] =sim.split("\\s");  
                     for(int i=0;i<simi.length;i++)
   {
    String tmp_wd = simi[i].trim();
+   
+   // now making a vector for distinct words which are in file1
    if(tmp_wd.length()>0)
    {
     if(frequency_wordv.containsKey(tmp_wd))
