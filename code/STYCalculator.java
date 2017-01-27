@@ -55,6 +55,36 @@ public class STYCalculator {
 		this.file = file;
 		calculate();
 	}
+
+	private void calculate() throws IOException {
+		FileReader fileRead1 = new FileReader(this.file);
+		BufferedReader br1 = new BufferedReader(fileRead1);
+		contentFile1 = br1.lines().collect(Collectors.toList());
+		br1.close();
+
+		// contentFile2.forEach(System.out::println);
+
+		String currentLine = null;
+
+		for (int i = 0; i < contentFile1.size(); i++) {
+			currentLine = contentFile1.get(i);
+			openBraceCount(currentLine);
+			
+		}
+
+	}
 	
+	private void openBraceCount(String currentLine) {
+		// counts open braces and open braces that are last in line
+		currentLine = currentLine.trim();
+		int openBraceIndex = currentLine.indexOf('{');
+		if (openBraceIndex != -1) {
+			totalOpenBraces++;
+			if (openBraceIndex == (currentLine.length() - 1)) {
+				lastOpenBraceCount++;
+			}
+		}
+
+	}
 
 }
