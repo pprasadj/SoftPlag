@@ -78,25 +78,38 @@ double Cosine_score(File f1,File f2) throws Exception
    }
   }
                 }
+                 for (String sim1 : l2 ){
+                   String sim2[] =sim1.split("\\s");  
+                   for(int i=0;i<sim2.length;i++)
+  {
+   String tmp_wd = sim2[i].trim();
+   if(tmp_wd.length()>0)
+   {
+    if(frequency_wordv.containsKey(tmp_wd))
+    {
+     Cos vals1 = frequency_wordv.get(tmp_wd);
+     int freq1 = vals1.wd1;
+     int freq2 = vals1.wd2+1;
+     vals1.Update_VAl(freq1, freq2);
+     frequency_wordv.put(tmp_wd, vals1);
+    }
+    else
+    {
+     Cos vals1 = new Cos(0, 1);
+     frequency_wordv.put(tmp_wd, vals1);
+     Distinct_words_text_1_2.add(tmp_wd);
+    }
+   }
+  }
+                     }
+                  
                        
   return(sim_score);
    
                 
                 
 
-              
-           //     for (String s:l1)
-            //    {
-             /*   String pattern="[\\s]";
-      String replace = "";
-      Pattern p = Pattern.compile(pattern);
-      Matcher m = p.matcher(s);
-    String  str = m.replaceAll(replace);
-    */
-                // System.out.println(str);
-           //     System.out.println(l2);
-                //}
- 
+  
    }
     
     
