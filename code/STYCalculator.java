@@ -69,6 +69,7 @@ public class STYCalculator {
 		for (int i = 0; i < contentFile1.size(); i++) {
 			currentLine = contentFile1.get(i);
 			openBraceCount(currentLine);
+			closedBraceCount(currentLine);
 			
 		}
 
@@ -85,6 +86,21 @@ public class STYCalculator {
 			}
 		}
 
+	}
+
+	private void closedBraceCount(String currentLine) {
+		// counts number of closing brackets that are first and last of line
+		currentLine = currentLine.trim();
+		int closeBraceIndex = currentLine.indexOf('}');
+		if (closeBraceIndex != -1) {
+			totalCloseBraces++;
+			if (closeBraceIndex == (currentLine.length() - 1)) {
+				lastCloseBraceCount++;
+			}
+			if (closeBraceIndex == 0) {
+				firstCloseBraceCount++;
+			}
+		}
 	}
 
 }
