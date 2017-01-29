@@ -22,10 +22,20 @@ public class ProgramLength {
 	
 				String[] str1 = str.replaceAll("\\s+", " ").replaceAll("\\W", "").split(" ");
 				
+				for (String s : str1) {
+					totalCharacters += s.length();
+				}
+				
 				}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		
+		 MeanProgramLength=(float)totalCharacters/totalLines;
+		  System.out.println("Total Characters: " + totalCharacters);
+		
+		  System.out.println("Toal Lines: " + totalLines);
+                  System.out.println("MeanProgramLength: "+ MeanProgramLength);
 		
 		}
  public static void main(String[] args) throws IOException {
