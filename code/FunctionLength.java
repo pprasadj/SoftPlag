@@ -7,7 +7,6 @@ import java.io.IOException;
 public class FunctionLength {
 private static void Functionlength(String File) throws FileNotFoundException, IOException {
 
-int i;
 
 
 
