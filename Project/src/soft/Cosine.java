@@ -43,24 +43,25 @@ double Cosine_score(File f1,File f2) throws Exception
        
        // finding unique words from two documents.
  Hashtable<String, Cos> frequency_wordv = new Hashtable<String, Cosine.Cos>();
-  LinkedList<String> Distinct_words_text_1_2 = new LinkedList<String>();
+  LinkedList<String> distinctwords_1_2 = new LinkedList<String>();
 		BufferedReader br1 = new BufferedReader(new FileReader(f1));  // taking input from file 1
 		BufferedReader br2 = new BufferedReader(new FileReader(f2));  // taking input from file 2
 
 		// taking contents in a list
                 List<String> l1 = br1.lines().collect(Collectors.toList());
-		List<String> l2 = br2.lines().collect(Collectors.toList()); 
-                
+		List<String> l2 = br2.lines().collect(Collectors.toList());
+              
                // removing spaces between two words and stored in a array
                 for (String sim : l1 ){
                    String simi[] =sim.split("\\s");  
-                    for(int i=0;i<simi.length;i++)
+                for(int i=0;i<simi.length;i++)
   {
    String tmp_wd = simi[i].trim();
    
    // now making a vector for distinct words which are in file1
    if(tmp_wd.length()>0)
    {
+    
     if(frequency_wordv.containsKey(tmp_wd))
     {
      Cos vals1 = frequency_wordv.get(tmp_wd);
@@ -73,16 +74,17 @@ double Cosine_score(File f1,File f2) throws Exception
     {
      Cos vals1 = new Cos(1, 0);
      frequency_wordv.put(tmp_wd, vals1);
-     Distinct_words_text_1_2.add(tmp_wd);
+     distinctwords_1_2.add(tmp_wd);
     }
    }
   }
                 }
                  for (String sim1 : l2 ){
-                   String sim2[] =sim1.split("\\s");  
+                   String sim2[] =sim1.split("\\s"); 
+                   
                    for(int i=0;i<sim2.length;i++)
   {
-   String tmp_wd = sim2[i].trim();
+     String tmp_wd = sim2[i].trim();
    if(tmp_wd.length()>0)
    {
     if(frequency_wordv.containsKey(tmp_wd))
@@ -97,19 +99,35 @@ double Cosine_score(File f1,File f2) throws Exception
     {
      Cos vals1 = new Cos(0, 1);
      frequency_wordv.put(tmp_wd, vals1);
-     Distinct_words_text_1_2.add(tmp_wd);
+     distinctwords_1_2.add(tmp_wd);
     }
    }
   }
                      }
                   
+  double VectAB = 0.00;
+  double Vecta = 0.00;    
+  double Vectb = 0.00;
+   
+  for(int i=0;i<distinctwords_1_2.size();i++)
+  {
+   Cos vals12 = frequency_wordv.get(distinctwords_1_2.get(i));
+   
+   double freq1 = (double)vals12.wd1;
+   double freq2 = (double)vals12.wd2;
+   System.out.println(distinctwords_1_2.get(i)+"#"+freq1+"#"+freq2);
+    
+   VectAB=VectAB+(freq1*freq2);
+    
+   Vecta = Vecta + freq1*freq1;
+   Vectb = Vectb + freq2*freq2;
+  }
+  System.out.println("VectAB "+VectAB+" Vecta "+Vecta+" Vectb "+Vectb);
+  sim_score = ((VectAB)/(Math.sqrt(Vecta)*Math.sqrt(Vectb)));
+
                        
   return(sim_score);
    
-                
-                
-
-  
    }
     
     
