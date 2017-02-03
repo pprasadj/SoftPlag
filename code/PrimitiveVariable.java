@@ -42,7 +42,91 @@ public class PrimitiveVariable {
 	}
 	
 
+public int variableCount() throws FileNotFoundException, IOException {
+		FileReader fileRead1 = new FileReader(file1);
 
+		BufferedReader br1 = new BufferedReader(fileRead1);
+		
+	List<String> contentFile1 = br1.lines().collect(Collectors.toList());
+		
+		try {
+           
+			br1.close();
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		Iterator<String> itr1 = contentFile1.iterator();
+		
+               
+		
+		List<String> commentsFile1 = new ArrayList<String>();
+		
+		boolean multiLineComment = false;
+		boolean multiLineComment2 = false;
+		while (itr1.hasNext()) {
+			boolean reachedCodeFile1 = false;
+			
+			currentLineFile1 = itr1.next();
+                          
+			
+			while (!reachedCodeFile1 ) {
+                            
+				if (!reachedCodeFile1) {
+                    	 		
+					if (currentLineFile1.trim().isEmpty() || currentLineFile1.startsWith("public class")
+							|| currentLineFile1.startsWith("class")) {
+                                            
+						currentLineFile1 = itr1.next();
+					
+
+					} else if (currentLineFile1.contains("*/")) {
+					
+						multiLineComment = false;
+              comment++;
+						currentLineFile1 = itr1.next();
+					} else if (multiLineComment) {
+						currentLineFile1 = itr1.next();
+                comment++;
+					} else if (currentLineFile1.contains("/*")) {
+					comment++;
+						multiLineComment = true;
+					} else if (currentLineFile1.trim().startsWith("//")) {
+					
+						commentsFile1.add(currentLineFile1);
+						currentLineFile1 = itr1.next();
+               comment1++;
+                                                
+					
+					}
+                                       
+                                       
+               else {
+						getCurrLineVariables(currentLineFile1,"file1");
+						reachedCodeFile1 = true;
+                                                
+					
+              if(currentLineFile1.contains("private void")||currentLineFile1.contains("public int")||(currentLineFile1.contains("void"))||(currentLineFile1.contains("private int"))){
+                    functioncount++;
+                    
+                        //System.out.println(currentLineFile1);
+                
+                String[] str1 = currentLineFile1.replaceAll("\\s+", " ").replaceAll("\\W", "").split(" ");
+                for (String s : str1) {
+					totalCharacters += s.length();
+				}
+                
+            
+        }
+        }
+					
+				}
+
+			}
+       }
 
 
 
