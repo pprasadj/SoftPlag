@@ -82,6 +82,20 @@ public class STYCalculator {
 			if (operatorList.size() != 0) {
 				operatorWhiteSpaceCount(currentLine, operatorList);
 			}
+
+			lineLengthCalculator(currentLine);
+
+		}
+
+	}
+	
+	private void lineLengthCalculator(String currentLine) {
+		totalLines++;
+
+		String[] str1 = currentLine.replaceAll("\\s+", " ").replaceAll("\\W", "").split(" ");
+		for (String s : str1) {
+			lineLengthList.add(s.length());
+			totalCharacters += s.length();
 		}
 
 	}
