@@ -6,16 +6,18 @@ import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
  
-public class PSM1{
+public class PSM1 {
 
 	private int newCount;
 	private int implementCount;
+	private int classCount;
 
 	private List<String> contentFile1;
 	private File file;
 
 	private float psm7cWeight = 0.1f;
 	private float psm7eWeight = 0.38f;
+	private float psm7jWeight = 0.2f;
 
 	public code(File file) throws IOException {
 		this.file = file;
@@ -28,6 +30,8 @@ public class PSM1{
 		STYCalculator sty = new STYCalculator(this.file);
 		sumOfPSM += psm7cWeight * (classCount/sty.getNonCommentLinesCount());
 		sumOfPSM += psm7eWeight * (implementCount/sty.getNonCommentLinesCount());
+		sumOfPSM += psm7jWeight * (newCount/sty.getNonCommentLinesCount());
+		
 	}
 
 	private void calculate() throws IOException {
@@ -42,6 +46,8 @@ public class PSM1{
 			currentLine = contentFile1.get(i);
 			getNewCount(currentLine);
 			getImplementCount(currentLine);
+			getPrivateCount(currentLine);
+
 		}
 	}
 
@@ -72,6 +78,20 @@ public class PSM1{
 		implementCount += (currentLine.length() - tempCurr.length()) / 10;
 
 	}
+	private void getClassCount(String currentLine) {
+		String tempCurr = currentLine;
+		if (currentLine.contains("class")) {
+			// System.out.println("found new");
+			tempCurr = tempCurr.replaceAll("class", "");
+			// System.out.println("curlength" + currentLine.length() + "temp len
+			// " + tempCurr.length());
+			// System.out.println("added " + (currentLine.length() -
+			// tempCurr.length())/3 + " to count");
+		}
+		classCount += (currentLine.length() - tempCurr.length()) / 4;
+
+	}
+
 	public static void main(String[] args) {
 		try {
 			code sm = new code(new File("F:\\BE project\\code\\File1.java"));
