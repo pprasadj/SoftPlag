@@ -24,6 +24,85 @@ public class FunctionLength {
 		
 		}
 		
+		public int functionCount() throws FileNotFoundException {
+		FileReader fileRead1 = new FileReader(file1);
+
+		BufferedReader br1 = new BufferedReader(fileRead1);
+		
+	List<String> contentFile1 = br1.lines().collect(Collectors.toList());
+		
+		try {
+			br1.close();
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		Iterator<String> itr1 = contentFile1.listIterator();
+		
+                String currentLineFile1 = null;
+		
+		List<String> commentsFile1 = new ArrayList<String>();
+		
+		boolean multiLineComment = false;
+		
+		while (itr1.hasNext()) {
+			boolean reachedCodeFile1 = false;
+			
+			currentLineFile1 = itr1.next();
+			
+			while (!reachedCodeFile1 ) {
+				if (!reachedCodeFile1) {
+                    			
+					if (currentLineFile1.trim().isEmpty() || currentLineFile1.startsWith("public class")
+							|| currentLineFile1.startsWith("class")) {
+                                            
+						currentLineFile1 = itr1.next();
+					
+
+					} 
+                                        else if (currentLineFile1.contains("*/")) {
+					
+						multiLineComment = false;
+                                                
+						currentLineFile1 = itr1.next();
+					}
+                                        
+                                                else if (multiLineComment) {
+						comment++;
+                                                
+                                                    currentLineFile1 = itr1.next();
+					} 
+                                                else if (currentLineFile1.contains("/*")) {
+                                                comment++;
+						multiLineComment = true;
+                                                
+					} 
+                                                else if (currentLineFile1.trim().startsWith("//")) {
+                                                comment1++;
+						commentsFile1.add(currentLineFile1);
+						currentLineFile1 = itr1.next();
+                                                
+                                                
+					
+					}
+                                       
+                                       
+                                        else {
+						
+						reachedCodeFile1 = true;
+						}
+						
+						}
+						}
+						}
+						 c=comment+comment1;
+               // System.out.println(c);
+		
+             return 0;
+            }
 		
 		
 		
