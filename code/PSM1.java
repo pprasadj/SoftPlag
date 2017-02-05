@@ -6,24 +6,31 @@ import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
  
-public class PSM1 {
+public class PSM1{
 
 	private int newCount;
-	
+	private int implementCount;
+
 	private List<String> contentFile1;
 	private File file;
 
 	private float psm7cWeight = 0.1f;
+	private float psm7eWeight = 0.38f;
+
 	public code(File file) throws IOException {
 		this.file = file;
 		calculate();
-    }
+
+	}
+
 	public float getWMStyleValue(){
 		int sumOfPSM = 0;
 		STYCalculator sty = new STYCalculator(this.file);
 		sumOfPSM += psm7cWeight * (classCount/sty.getNonCommentLinesCount());
+		sumOfPSM += psm7eWeight * (implementCount/sty.getNonCommentLinesCount());
 	}
-    private void calculate() throws IOException {
+
+	private void calculate() throws IOException {
 		FileReader fileRead1 = new FileReader(this.file);
 		BufferedReader br1 = new BufferedReader(fileRead1);
 		contentFile1 = br1.lines().collect(Collectors.toList());
@@ -34,7 +41,8 @@ public class PSM1 {
 		for (int i = 0; i < contentFile1.size(); i++) {
 			currentLine = contentFile1.get(i);
 			getNewCount(currentLine);
-			}
+			getImplementCount(currentLine);
+		}
 	}
 
 	private void getNewCount(String currentLine) {
@@ -48,8 +56,23 @@ public class PSM1 {
 			// tempCurr.length())/3 + " to count");
 		}
 		newCount += (currentLine.length() - tempCurr.length()) / 3;
+
 	}
-public static void main(String[] args) {
+
+	private void getImplementCount(String currentLine) {
+		String tempCurr = currentLine;
+		if (currentLine.contains("implements")) {
+			// System.out.println("found new");
+			tempCurr = tempCurr.replaceAll("implements", "");
+			// System.out.println("curlength" + currentLine.length() + "temp len
+			// " + tempCurr.length());
+			// System.out.println("added " + (currentLine.length() -
+			// tempCurr.length())/3 + " to count");
+		}
+		implementCount += (currentLine.length() - tempCurr.length()) / 10;
+
+	}
+	public static void main(String[] args) {
 		try {
 			code sm = new code(new File("F:\\BE project\\code\\File1.java"));
 
@@ -57,5 +80,7 @@ public static void main(String[] args) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+
 	}
+
 }
