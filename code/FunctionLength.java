@@ -10,6 +10,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collectors;
 
+
 public class FunctionLength {
 	private File file1;
 	
@@ -23,8 +24,9 @@ public class FunctionLength {
 		this.file1 = file1;
 		
 		}
-		
-		public int functionCount() throws FileNotFoundException {
+	
+	
+	public int functionCount() throws FileNotFoundException {
 		FileReader fileRead1 = new FileReader(file1);
 
 		BufferedReader br1 = new BufferedReader(fileRead1);
@@ -63,25 +65,25 @@ public class FunctionLength {
 					
 
 					} 
-                                        else if (currentLineFile1.contains("*/")) {
+             else if (currentLineFile1.contains("*/")) {
 					
 						multiLineComment = false;
                                                 
 						currentLineFile1 = itr1.next();
 					}
                                         
-                                                else if (multiLineComment) {
+            else if (multiLineComment) {
 						comment++;
                                                 
-                                                    currentLineFile1 = itr1.next();
+           currentLineFile1 = itr1.next();
 					} 
-                                                else if (currentLineFile1.contains("/*")) {
-                                                comment++;
+           else if (currentLineFile1.contains("/*")) {
+             comment++;
 						multiLineComment = true;
                                                 
 					} 
-                                                else if (currentLineFile1.trim().startsWith("//")) {
-                                                comment1++;
+          else if (currentLineFile1.trim().startsWith("//")) {
+            comment1++;
 						commentsFile1.add(currentLineFile1);
 						currentLineFile1 = itr1.next();
                                                 
@@ -90,23 +92,37 @@ public class FunctionLength {
 					}
                                        
                                        
-                                        else {
+             else {
 						
 						reachedCodeFile1 = true;
-						}
-						
-						}
-						}
-						}
-						 c=comment+comment1;
+					
+            if(currentLineFile1.contains("private void")||currentLineFile1.contains("public int")||(currentLineFile1.contains("void"))||(currentLineFile1.contains("private int"))){
+              functioncount++;
+               System.out.println(currentLineFile1);
+                String[] str1 = currentLineFile1.replaceAll("\\s+", " ").replaceAll("\\W", "").split(" ");
+                for (String s : str1) {
+					totalCharacters += s.length();
+				}
+                  System.out.println("totalCharacters="+totalCharacters);
+               // System.out.println("functioncount="+functioncount);
+                
+            
+                }
+                }
+                                      
+		            }
+               }
+		       	}
+                
+             c=comment+comment1;
                // System.out.println(c);
 		
              return 0;
             }
-		
-		
-		
-		 public static void countLine(String File ) throws FileNotFoundException, IOException{
+        
+
+	
+         public static void countLine(String File ) throws FileNotFoundException, IOException{
         String str;
 
 		try (BufferedReader br = new BufferedReader(new FileReader(File))){
@@ -116,8 +132,9 @@ public class FunctionLength {
                 
                 }
         }
-        
-        public static void main(String[] args) throws IOException {
+       
+
+	public static void main(String[] args) throws IOException {
 		
                     FunctionLength object = new FunctionLength(new File("C:\\Users\\kunal\\Desktop\\project\\code\\File1.java"));
                      String File="C:\\Users\\kunal\\Desktop\\project\\code\\File1.java";
@@ -128,10 +145,30 @@ public class FunctionLength {
 // Finally, the LineNumberReader object should be closed to prevent resource leak
 
                     lnr.close();*/
-                    
-                    }
-                    
-                    }
+                    var = object.functionCount();
+                    //System.out.println("totalCharacters="+totalCharacters);
+              // System.out.println("functioncount="+functioncount);
+                  //  
+                        System.out.println("Total No of comment lines="+ c);
+                       // System.out.println("No of variables"+var);
+                       
+                        System.out.println("Total No of  lines="+ totalline);
+                        prime=totalline-c;
+                        
+                        System.out.println("Total No of Non-comment lines="+ prime);
+                        
+                         	
+	
+        }
+       
+}
+
+
+
+
+
+
+
 
 /*
 public class FunctionLength {
