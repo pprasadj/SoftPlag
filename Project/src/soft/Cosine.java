@@ -44,8 +44,8 @@ double Cosine_score(File f1,File f2) throws Exception
        // finding unique words from two documents.
  Hashtable<String, Cos> frequency_wordv = new Hashtable<String, Cosine.Cos>();
   LinkedList<String> distinctwords_1_2 = new LinkedList<String>();
-		BufferedReader br1 = new BufferedReader(new FileReader(f1));  // taking input from file 1
-		BufferedReader br2 = new BufferedReader(new FileReader(f2));  // taking input from file 2
+		BufferedReader br1 = new BufferedReader(new FileReader(f1));  // Reading contents from file 1
+		BufferedReader br2 = new BufferedReader(new FileReader(f2));  // Reading contents from file 2
 
 		// taking contents in a list
                 List<String> l1 = br1.lines().collect(Collectors.toList());
@@ -64,7 +64,8 @@ double Cosine_score(File f1,File f2) throws Exception
     
     if(frequency_wordv.containsKey(tmp_wd))
     {
-     Cos vals1 = frequency_wordv.get(tmp_wd)
+
+     Cos vals1 = frequency_wordv.get(tmp_wd);
 	     // Calculating the frequency of the word
      int freq1 = vals1.wd1+1;
      int freq2 = vals1.wd2;
