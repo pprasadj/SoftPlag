@@ -1,7 +1,0 @@
-Plagiarism Detection in Java Programming Assignments
-
-Similarity detection tools are commonly used by teacher ,guide to detect and prevent student cheating in academic assignments . To create environment for student to solve assignments using their own ideas.
-Systems identifying similarity in programming assignments are generally classified as either attribute-based or structure-based systems. Attribute-based method is used to detect lexical changes using program attribute and structure-based method analysis complete structure of program to detect structure similarities. 
-
-Plagiarism is an attempt to pass off someone's work, in a whole or part, as his/her own work without giving credit. So most of students who copy materials from different book, materials without citing references. In lexical type small changes can be done in programming like adding or deleting comments, changing variables name etc. while in Structural one can change structure of program without altering its significance.  Similarity can be detected automatically and manually also .but an effort and time required to detect similarity is more in manual as compared to automatic detection.
-There are three different classes of similarity detection methods: quiz methods, writing style methods, and comparison methods with original sources. So here we are dealing with comparison methods with original source.
