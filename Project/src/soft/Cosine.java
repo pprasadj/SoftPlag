@@ -44,8 +44,8 @@ double Cosine_score(File f1,File f2) throws Exception
        // finding unique words from two documents.
  Hashtable<String, Cos> frequency_wordv = new Hashtable<String, Cosine.Cos>();
   LinkedList<String> distinctwords_1_2 = new LinkedList<String>();
-		BufferedReader br1 = new BufferedReader(new FileReader(f1));  // taking input from file 1
-		BufferedReader br2 = new BufferedReader(new FileReader(f2));  // taking input from file 2
+		BufferedReader br1 = new BufferedReader(new FileReader(f1));  // Reading contents from file 1
+		BufferedReader br2 = new BufferedReader(new FileReader(f2));  // Reading contents from file 2
 
 		// taking contents in a list
                 List<String> l1 = br1.lines().collect(Collectors.toList());
@@ -65,6 +65,7 @@ double Cosine_score(File f1,File f2) throws Exception
     if(frequency_wordv.containsKey(tmp_wd))
     {
      Cos vals1 = frequency_wordv.get(tmp_wd);
+	     // Calculating the frequency of the word
      int freq1 = vals1.wd1+1;
      int freq2 = vals1.wd2;
      vals1.Update_VAl(freq1, freq2);
@@ -85,10 +86,15 @@ double Cosine_score(File f1,File f2) throws Exception
                    for(int i=0;i<sim2.length;i++)
   {
      String tmp_wd = sim2[i].trim();
+			   
+//   Now making a vector for distinct words which are in file 2	
+			   
    if(tmp_wd.length()>0)
    {
     if(frequency_wordv.containsKey(tmp_wd))
     {
+	    // Calculating the frequency of the word
+	    
      Cos vals1 = frequency_wordv.get(tmp_wd);
      int freq1 = vals1.wd1;
      int freq2 = vals1.wd2+1;
@@ -104,6 +110,7 @@ double Cosine_score(File f1,File f2) throws Exception
    }
   }
                      }
+// Cosine similarity formula to calculate similarity between two files
                   
   double VectAB = 0.00;
   double Vecta = 0.00;    
@@ -133,14 +140,13 @@ double Cosine_score(File f1,File f2) throws Exception
     
     public static void main(String[] args) throws Exception {
         
-    File f1=new File("C:\\Users\\Manish\\Desktop\\Project\\file1.java");
+    File f1=new File("C:\\Users\\Manish\\Desktop\\Project\\file1.java");  // Taking input File 1
      
-    File f2=new File("C:\\Users\\Manish\\Desktop\\Project\\file2.java");
-      Cosine cs1 = new Cosine();
-    //double Cos_sim_score= cs1.Cosine_score("My project is Software plagiarism", "My project is Software Plagiarism");
+    File f2=new File("C:\\Users\\Manish\\Desktop\\Project\\file2.java");  // Taking input File 2
+   Cosine cs1 = new Cosine();
    System.out.println("[Word # VectorA # VectorB]");
     double sim_score =cs1.Cosine_score(f1,f2);   
-    System.out.println("the Cosine Similarity Score is " +sim_score);
+    System.out.println("The Cosine Similarity Score is " +sim_score);  // Generating cosine similarity score
     }
    
     
