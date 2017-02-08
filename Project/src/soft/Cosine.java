@@ -64,6 +64,7 @@ double Cosine_score(File f1,File f2) throws Exception
     
     if(frequency_wordv.containsKey(tmp_wd))
     {
+
      Cos vals1 = frequency_wordv.get(tmp_wd);
 	     // Calculating the frequency of the word
      int freq1 = vals1.wd1+1;

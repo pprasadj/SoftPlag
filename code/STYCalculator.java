@@ -69,7 +69,33 @@ public class STYCalculator {
 		for (int i = 0; i < contentFile1.size(); i++) {
 			currentLine = contentFile1.get(i);
 			openBraceCount(currentLine);
-			
+			closedBraceCount(currentLine);
+			if (currentLine.indexOf("{") != -1) {
+				avgIndentationSpace(i);
+			}
+			commentsCounter(currentLine);
+			String[] operators = { "+", "-", "/", "*", "%", "<", ">", "<=", ">=", "instanceof", "==", "!=", "&", "^",
+					"|", "||", "&&", "+=", "+=", "-=", "*=", "/=", "%=" };
+			List<String> operatorList = stringContainsOperatorsFromList(currentLine, operators);
+			totalOperatorList.addAll(operatorList);
+			totalOperators += operatorList.size();
+			if (operatorList.size() != 0) {
+				operatorWhiteSpaceCount(currentLine, operatorList);
+			}
+
+			lineLengthCalculator(currentLine);
+
+		}
+
+	}
+	
+	private void lineLengthCalculator(String currentLine) {
+		totalLines++;
+
+		String[] str1 = currentLine.replaceAll("\\s+", " ").replaceAll("\\W", "").split(" ");
+		for (String s : str1) {
+			lineLengthList.add(s.length());
+			totalCharacters += s.length();
 		}
 
 	}
@@ -86,5 +112,170 @@ public class STYCalculator {
 		}
 
 	}
+
+	private void closedBraceCount(String currentLine) {
+		// counts number of closing brackets that are first and last of line
+		currentLine = currentLine.trim();
+		int closeBraceIndex = currentLine.indexOf('}');
+		if (closeBraceIndex != -1) {
+			totalCloseBraces++;
+			if (closeBraceIndex == (currentLine.length() - 1)) {
+				lastCloseBraceCount++;
+			}
+			if (closeBraceIndex == 0) {
+				firstCloseBraceCount++;
+			}
+		}
+	}
+
+	private void avgIndentationSpace(int lineNumber) {
+		// counts avg in space
+		numIndentation++;
+		String currentLine = contentFile1.get(lineNumber);
+		String nextLine = contentFile1.get(lineNumber + 1);
+		// System.out.println(currentLine);
+		// System.out.println(nextLine);
+		int indentStartIndex = 0;
+		char[] currentLineArr = currentLine.toCharArray();
+		for (int i = 0; i < currentLine.length(); i++) {
+			if (currentLineArr[i] != ' ') {
+				indentStartIndex = i;
+				break;
+			}
+		}
+		// System.out.println(indentStartIndex);
+		int indentNextLine = 0;
+		char[] nextLineArr = nextLine.toCharArray();
+		for (int i = indentStartIndex; i < nextLine.length(); i++) {
+			if (nextLineArr[i] != ' ') {
+				break;
+			}
+			indentNextLine++;
+		}
+		// System.out.println(indentNextLine);
+		indentList.add(indentNextLine);
+		numindentSpace += indentNextLine;
+
+	}
+
+	private void commentsCounter(String currentLine) {
+		// counts traditional and end of line comments counter
+		currentLine = currentLine.trim();
+		if (currentLine.contains("//") || currentLine.contains("/*")) {
+			if (currentLine.contains("/*")) {
+				traditionalContinueFlag = true;
+				System.out.println("found traditional : \t" + currentLine);
+				traditionalCommentCount++;
+			}
+			if (currentLine.contains("//")) {
+				System.out.println("found end of line : \t" + currentLine);
+				endofLineCommentCount++;
+				if (currentLine.startsWith("//")) {
+					pureCommentCount++;
+					System.out.println("found pure comment line : \t" + currentLine);
+				}
+			}
+		}
+		if (traditionalContinueFlag) {
+			if (currentLine.contains("*/")) {
+				traditionalContinueFlag = false;
+				System.out.println("traditonal ended : " + currentLine);
+				if (currentLine.endsWith("*/")) {
+					pureCommentCount++;
+					System.out.println("pure comment : " + currentLine);
+
+				}
+			} else {
+				System.out.println("found traditional continued : \t" + currentLine);
+				System.out.println("found pure comment line : \t" + currentLine);
+				if (!currentLine.startsWith("/*")) {
+					pureCommentCount++;
+				}
+			}
+		}
+
+	}
+
+
+	private List<String> stringContainsOperatorsFromList(String currentLine, String[] operators) {
+		char[] charArr = currentLine.toCharArray();
+		List<String> operatorList = new ArrayList<String>();
+		for (int i = 0; i < operators.length; i++) {
+			if (currentLine.contains(operators[i])) {
+				if (operators[i].length() > 1) {
+					char[] opArray = operators[i].toCharArray();
+					String singleOperator = String.valueOf(opArray[0]);
+					operatorList.remove(singleOperator);
+				}
+				if (operators[i].equals("/")) {
+					int indexOfDiv = operators[i].indexOf("/");
+					if (charArr[indexOfDiv + 1] == '/' && (indexOfDiv != charArr.length - 1)) {
+						continue;
+					}
+				}
+				int commentStartIndex = currentLine.length() - 1;
+				int commentEndIndex = 0;
+				if (currentLine.contains("//") || currentLine.contains("/*") || currentLine.contains("*/")) {
+					if (currentLine.contains("//")) {
+						commentStartIndex = currentLine.indexOf("//");
+					} else if (currentLine.contains("/*")) {
+						commentStartIndex = currentLine.indexOf("/*");
+					}
+					if (currentLine.contains("*/")) {
+						commentEndIndex = currentLine.indexOf("/*");
+					}
+				}
+				if (!traditionalContinueFlag) {
+					int operatorIndex = currentLine.indexOf(operators[i]);
+					if (operatorIndex < commentStartIndex && operatorIndex > commentEndIndex) {
+						operatorList.add(operators[i]);
+					}
+				}
+			}
+		}
+		/*
+		 * if (operatorList.size() != 0) { System.out.println(
+		 * "\tLine contains following operators : "); for (String operator :
+		 * operatorList) { //System.out.print("\t" + operator + " "); }
+		 * //System.out.println(); }
+		 */
+		return operatorList;
+	}
+
+	private void operatorWhiteSpaceCount(String currentLine, List<String> operators) {
+		// counts whitespcae around operaotr
+		// System.out.println("\tThe line is : " + currentLine);
+		char[] lineCharArr = currentLine.toCharArray();
+		linesWithOperatorCount++;
+		for (String operator : operators) {
+			int indOperator = currentLine.indexOf(operator);
+			int leadingSpace = 0;
+			int trailingSpace = 0;
+			int i1 = indOperator + 1;
+			if (operator.length() > 1) {
+				i1 += (operator.length() - 1);
+			}
+			for (; i1 < currentLine.length(); i1++) {
+				if (lineCharArr[i1] != ' ') {
+					break;
+				}
+				trailingSpace++;
+			}
+			for (int i = indOperator - 1; i > 0; i--) {
+				if (lineCharArr[i] != ' ') {
+					break;
+				}
+				leadingSpace++;
+			}
+			// System.out.println("cuurent line is " + currentLine);
+			// System.out.println("\tspace near " + operator + " is
+			// leadingspace: " + leadingSpace + " trailingspace: "+
+			// trailingSpace);
+			totalSpaceBeforeOperator += leadingSpace;
+			totalSpaceAfterOperator += trailingSpace;
+		}
+
+	}
+
 
 }
