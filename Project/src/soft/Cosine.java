@@ -122,7 +122,7 @@ double Cosine_score(File f1,File f2) throws Exception
    
    double freq1 = (double)vals12.wd1;
    double freq2 = (double)vals12.wd2;
-   System.out.println(distinctwords_1_2.get(i)+"#"+freq1+"#"+freq2);
+ // System.out.println(distinctwords_1_2.get(i)+"#"+freq1+"#"+freq2);
     
    VectAB=VectAB+(freq1*freq2);
     
@@ -137,9 +137,8 @@ double Cosine_score(File f1,File f2) throws Exception
    
    }
     
-    
     public static void main(String[] args) throws Exception {
-        
+       double d=System.currentTimeMillis();
     File f1=new File("C:\\Users\\Manish\\Desktop\\Project\\file1.java");  // Taking input File 1
      
     File f2=new File("C:\\Users\\Manish\\Desktop\\Project\\file2.java");  // Taking input File 2
@@ -147,6 +146,8 @@ double Cosine_score(File f1,File f2) throws Exception
    System.out.println("[Word # VectorA # VectorB]");
     double sim_score =cs1.Cosine_score(f1,f2);   
     System.out.println("The Cosine Similarity Score is " +sim_score);  // Generating cosine similarity score
+   double d1=System.currentTimeMillis();
+   System.out.println("time" +(d-d1));
     }
    
     
