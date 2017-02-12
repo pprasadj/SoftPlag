@@ -85,6 +85,11 @@ public class STYCalculator {
 
 			lineLengthCalculator(currentLine);
 
+			String regex = "((public|private|protected|static|final|native|synchronized|abstract|transient)+\\s)+[\\$_\\w\\<\\>\\w\\s\\[\\]]*\\s+[\\$_\\w]+\\([^\\)]*\\)?\\s*(\\s+|\\w+|\\W+)*\\{*";
+					if (currentLine.trim().matches(regex)) {
+						functionNameCounter(currentLine);
+					}
+
 		}
 
 	}
@@ -275,6 +280,27 @@ public class STYCalculator {
 			totalSpaceAfterOperator += trailingSpace;
 		}
 
+	}
+
+	private void functionNameCounter(String currentLine) {
+		// TODO comment bug
+		totalFunctions++;
+		int nameIndex = currentLine.trim().indexOf("(");
+		String methodName = "";
+		char[] charArray = currentLine.trim().toCharArray();
+		for (int i = nameIndex - 1; i > 0; i--) {
+			if (charArray[i] == ' ') {
+				break;
+			}
+			methodName += Character.toString(charArray[i]);
+
+		}
+		StringBuilder str = new StringBuilder(methodName);
+		str.reverse();
+		methodName = str.toString();
+		methodNameList.add(methodName);
+
+		totalFunctionNameLength += methodName.length();
 	}
 
 
