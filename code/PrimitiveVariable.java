@@ -13,34 +13,29 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-
-
 public class PrimitiveVariable {
 	private File file1;
-	
 
 	private static HashMap<String, Integer> variableCountFile1;
-	
+
 	private Set<String> variableTypeSet;
-       static int comment,comment1,c,counter1;
-	static int var ,prime;
-       static double p=0.0;
-       int functioncount,totalCharacters;
-       static int totalline;
-       static int totalVariablesFile1 ;
-       
-        String currentLineFile1 = null;
-       
-	
+	static int comment, comment1, c, counter1;
+	static int var, prime;
+	static double p = 0.0;
+	int functioncount, totalCharacters;
+	static int totalline;
+	static int totalVariablesFile1;
+
+	String currentLineFile1 = null;
+
 	public PrimitiveVariable(File file1) {
 		this.file1 = file1;
-		
+
 		variableCountFile1 = new HashMap<String, Integer>();
-		
+
 		variableTypeSet = new HashSet<String>(
-				Arrays.asList(new String[] { "int", "float", "long", "boolean", "double", "char"}));
+				Arrays.asList(new String[] { "int", "float", "long", "boolean", "double", "char" }));
 	}
-	
 
 public int variableCount() throws FileNotFoundException, IOException {
 		FileReader fileRead1 = new FileReader(file1);
@@ -127,22 +122,6 @@ public int variableCount() throws FileNotFoundException, IOException {
 
 			}
        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 public static void main(String[] args) throws IOException {
 		
