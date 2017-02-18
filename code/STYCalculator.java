@@ -89,6 +89,7 @@ public class STYCalculator {
 					if (currentLine.trim().matches(regex)) {
 						functionNameCounter(currentLine);
 					}
+		    getPrimitiveVariableCount(currentLine);
 
 		}
 
@@ -301,6 +302,56 @@ public class STYCalculator {
 		methodNameList.add(methodName);
 
 		totalFunctionNameLength += methodName.length();
+	}
+
+
+	private void getPrimitiveVariableCount(String currentLine) {
+		currentLine = currentLine.trim();
+		for (String type : variableTypeSet) {
+			if (currentLine.contains(type)) {
+				String regexVariableType = type + "\\s+";
+				Matcher m = Pattern.compile(regexVariableType).matcher(currentLine);
+				int endOfvariable = 0;
+				String foundType = "";
+				String foundVariableName = "";
+				while (m.find(endOfvariable)) {
+					endOfvariable = m.end();
+
+					if (!traditionalContinueFlag) {
+
+						int startOfVariable = m.start();
+						if (startOfVariable < commentStartIndex && startOfVariable > commentEndIndex) {
+
+							foundType = m.group(0);
+							// System.out.println("found type : " + foundType);
+							String temSubString = currentLine.substring(endOfvariable);
+							// System.out.println("sub string is:" +
+							// temSubString);
+							String regexVariableName = "\\w+";
+							Matcher m2 = Pattern.compile(regexVariableName).matcher(temSubString);
+							while (m2.find()) {
+								foundVariableName = m2.group(0);
+								// System.out.println("found variable name: " +
+								// foundVariableName);
+								if (typeCount.get(foundType) == null) {
+									typeCount.put(foundType, 1);
+								} else {
+									typeCount.put(foundType, typeCount.get(foundType) + 1);
+								}
+
+								if (variableCount.get(foundVariableName) == null) {
+									variableCount.put(foundVariableName, 1);
+								} else {
+									variableCount.put(foundVariableName, variableCount.get(foundVariableName) + 1);
+								}
+								break;
+							}
+						}
+					}
+				}
+			}
+		}
+
 	}
 
 
