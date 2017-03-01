@@ -89,8 +89,25 @@ public class STYCalculator {
 					if (currentLine.trim().matches(regex)) {
 						functionNameCounter(currentLine);
 					}
+
 		    getPrimitiveVariableCount(currentLine);
 
+		    getNewCount(currentLine);
+
+		}
+
+	}
+
+	private void getNewCount(String currentLine) {
+		currentLine = currentLine.trim();
+		String regex = "new" + "\\s+";
+		Matcher m = Pattern.compile(regex).matcher(currentLine);
+		int start = 0;
+		while (m.find(start)) {
+			start = m.end();
+			if (start < commentStartIndex && start > commentEndIndex) {
+				newCount++;
+			}
 		}
 
 	}
