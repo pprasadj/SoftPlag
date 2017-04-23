@@ -1,10 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package soft;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -16,7 +9,6 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
-
 /**
  *
  * @author Manish
@@ -86,8 +78,7 @@ double Cosine_score(File f1,File f2) throws Exception
                    
                    for(int i=0;i<sim2.length;i++)
   {
-     String tmp_wd = sim2[i].trim();
-			   
+     String tmp_wd = sim2[i].trim();	   
 //   Now making a vector for distinct words which are in file 2	
 			   
    if(tmp_wd.length()>0)
@@ -107,7 +98,7 @@ double Cosine_score(File f1,File f2) throws Exception
      Cos vals1 = new Cos(0, 1);
      frequency_wordv.put(tmp_wd, vals1);
      distinctwords_1_2.add(tmp_wd);
-    }
+     }
    }
   }
                      }
@@ -123,7 +114,7 @@ double Cosine_score(File f1,File f2) throws Exception
    
    double freq1 = (double)vals12.wd1;
    double freq2 = (double)vals12.wd2;
-   System.out.println(distinctwords_1_2.get(i)+"#"+freq1+"#"+freq2);
+  // System.out.println(distinctwords_1_2.get(i)+"#"+freq1+"#"+freq2);
     
    VectAB=VectAB+(freq1*freq2);
     
@@ -132,12 +123,10 @@ double Cosine_score(File f1,File f2) throws Exception
   }
   System.out.println("VectAB "+VectAB+" Vecta "+Vecta+" Vectb "+Vectb);
   sim_score = ((VectAB)/(Math.sqrt(Vecta)*Math.sqrt(Vectb)));
-
-                       
+                    
   return(sim_score);
    
    }
-    
     
     public static void main(String[] args) throws Exception {
         
@@ -146,9 +135,9 @@ double Cosine_score(File f1,File f2) throws Exception
     File f2=new File("C:\\Users\\Manish\\Desktop\\Project\\file2.java");  // Taking input File 2
    Cosine cs1 = new Cosine();
    System.out.println("[Word # VectorA # VectorB]");
-    double sim_score =cs1.Cosine_score(f1,f2);   
-    System.out.println("The Cosine Similarity Score is " +sim_score);  // Generating cosine similarity score
+    double sim_score =cs1.Cosine_score(f1,f2);
+    sim_score=sim_score*100;
+    System.out.println("The Cosine Similarity Score is " + sim_score + " " +"%");  // Generating cosine similarity score
     }
-   
     
 }
